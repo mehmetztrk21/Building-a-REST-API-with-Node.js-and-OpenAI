@@ -20,7 +20,7 @@ function generatePrompt(question) {
 }
 
 const openai = new OpenAIApi(Config);
-app.post("/find-complexity", async (req, res) => {
+app.post("/answer", async (req, res) => {
     try {
         const response = await openai.createCompletion({
             model: "text-davinci-003",
